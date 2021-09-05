@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Checkerboard</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+            margin: 20px;
+            color: darkseagreen;
+        }
+        table tr td{
+            width: 40px;
+            height: 40px;
+        }
+       .boxcolor1{
+           background-color: darkseagreen;
+       }
+       .boxcolor2{
+           background-color: antiquewhite;
+       }
+    </style>
+</head>
+<body>
+    <h1>***Checkerboard***</h1>
+<table>
+    {% for i in range(column ): %}
+    <tr>
+        {% for k in range(row): %}
+        <td class="boxcolor{{ (i+k)%2+1  }}"></td>
+        {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>
